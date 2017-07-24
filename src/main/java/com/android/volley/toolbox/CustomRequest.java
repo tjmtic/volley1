@@ -35,11 +35,12 @@ public class CustomRequest extends Request<JSONObject> {
 
     }
 
-    public CustomRequest(int method, String url, Map<String, String> params,
+    public CustomRequest(int method, String url, Map<String, String> params, String sid,
                          Response.Listener<JSONObject> responseListener, Response.ErrorListener errorListener) {
         super(method, url, errorListener);
         this.listener = responseListener;
         this.params = params;
+        this.cookie = sid;
 
     }
 
